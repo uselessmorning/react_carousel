@@ -49,10 +49,14 @@ const App: React.FC = () => {
           onChange={e => setStep(Number(e.target.value))}
         />
       </label>
-      <input
-        value={animationDuration}
-        onChange={e => setAnimationDuration(Number(e.target.value))}
-      />
+      {/* eslint-disable-next-line */}
+      <label htmlFor="animationId">
+        <input
+          id="animationId"
+          value={animationDuration}
+          onChange={e => setAnimationDuration(Number(e.target.value))}
+        />
+      </label>
       <input
         type="checkbox"
         checked={infinite}
