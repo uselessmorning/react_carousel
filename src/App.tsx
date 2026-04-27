@@ -25,6 +25,7 @@ const App: React.FC = () => {
     <div className="App">
       {/* eslint-disable-next-line */}
       <h1 data-cy="title">Carousel with {images.length} images</h1>
+      {/* eslint-disable-next-line */}
       <label htmlFor="itemId">
         <input
           id="itemId"
@@ -32,6 +33,7 @@ const App: React.FC = () => {
           onChange={e => setItemWidth(Number(e.target.value))}
         />
       </label>
+      {/* eslint-disable-next-line */}
       <label htmlFor="frameId">
         <input
           id="frameId"

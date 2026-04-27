@@ -21,11 +21,19 @@ const Carousel: React.FC<CarouselProps> = ({
   const [position, setPosition] = useState(0);
 
   function handleNext() {
-    setPosition(Math.min(position + step, images.length - frameSize));
+    setPosition(
+      infinite && position >= images.length - frameSize
+        ? 0
+        : Math.min(position + step, images.length - frameSize),
+    );
   }
 
   function handlePrev() {
-    setPosition(Math.max(position - step, 0));
+    setPosition(
+      infinite && position === 0
+        ? images.length - frameSize
+        : Math.max(position - step, 0),
+    );
   }
 
   return (
